@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="css/helstyle.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">         
+        <meta charset="UTF-8">  
+
+        
+        <title>Heladeria</title>
+
+    </head>
+
+    <body>
+
+        <h1 style="color:#617F6C">Heladeria</h1>
+
+        <div>
+            <form action="conexion">
+                <fieldset>
+                    <legend>Ingreso de Datos</legend>
+                    <p>
+
+
+                        Heladeria : <select id="heladerias" name="heladerias">
+                            <option value="1">Palermo</option>
+                            <option value="2">Recoleta</option>
+                            <option value="3">Belgrano</option>
+                        </select>
+
+                       Sabor :  <select id="sabores" name="sabores" >
+                            <option value="1">Sambayon italiano</option>
+                            <option value="3">Sambayon Frances</option>
+                            <option value="5">Mousse de Limon</option>
+                            <option value="6">Pistacho</option>
+                        </select>
+
+                        Calorias : <input id="sabor_calorias"   type="number" name="quantity" min="1" max="6000">
+                        Fecha : <input id="fecha" type="date" name="fecha" step="1" min="2016-01-01" max="2017-12-31">
+                        
+                    </p>
+
+
+                       
+                    <input type="button" class="boton1" id="postear" value="Datos"   onclick="addItem()"/>
+                    <!--<input type="submit"  value="Submit" onclick="envioCorrecto()"/>-->
+                    <input type="button" class="boton1" id="btnConsultar"  value="Insertar"/>
+                    <input type="button" class="boton1" id="limpiar"  value="Limpiar"/>
+                    
+                </fieldset>
+            </form>
+        </div>
+        <table id = "bueno">
+         <tbody id ="contenido">
+         </tbody>
+
+        </table>
+        <table id ="contenido2">
+            
+        </table>
+        
+        
+        <script src="js/mustache.js"></script>
+     <script src="js/helscript.js"></script> 
+    </body>
+
+
+
+</html>
